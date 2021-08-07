@@ -7,6 +7,7 @@
 ```sh
 npm install react-native-flatlist-pagination-hook
 ```
+react native flatlist usePagination hook to make infinity scroll simple and more easy.
 
 ## Usage
 
