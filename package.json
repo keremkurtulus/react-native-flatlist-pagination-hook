@@ -1,7 +1,7 @@
 {
   "name": "react-native-flatlist-pagination-hook",
-  "version": "0.1.0",
-  "description": "react native flatlist usePagination hook",
+  "version": "0.1.1",
+  "description": "react native flatlist usePagination hook to make infinity scroll more easy",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
@@ -34,7 +34,13 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "flatlist",
+    "pagination",
+    "lazy load",
+    "infinity load",
+    "infinity scroll",
+    "loading more"
   ],
   "repository": "https://github.com/ahmedGaber93/react-native-flatlist-pagination-hook",
   "author": "ahmedGaber93 <a.gaber0093@gmail.com> (https://github.com/ahmedGaber93/react-native-flatlist-pagination-hook#readme)",

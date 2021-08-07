@@ -51,11 +51,18 @@ const usePagination : usePaginationType = (pageSize = 10) => {
   };
 
 
+  const resetData = (data: any[]) => {
+    setData(data);
+    setLastPageSize(data?.length || 0)
+    setLoadingMore(false)
+  };
+
+
 
 
   return {
     data,
-    resetData : setData,
+    resetData,
     addData,
     onEndReached,
     loadingMore,
