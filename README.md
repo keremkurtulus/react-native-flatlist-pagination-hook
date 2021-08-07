@@ -35,25 +35,23 @@ import {View, Text, StyleSheet, FlatList, ActivityIndicator} from 'react-native'
 import usePagination from "react-native-flatlist-pagination-hook";
 
 
+const fetchApi = (page = 0) => {
+    const pages = [
+        [1,2,3,4,5,6,7,8,9,10],
+        [11,12,13,14,15,16,17,18,19,20],
+        [21,22,23,24,25]
+    ]
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve(pages[page] || []);
+        }, 1000);
+    });
+}
+
 
 
 const App : React.FC = () => {
-
-
-
-    const fetchApi = (page = 0) => {
-        const data = [
-            [1,2,3,4,5,6,7,8,9,10],
-            [11,12,13,14,15,16,17,18,19,20],
-            [21,22,23,24,25]
-        ]
-        return new Promise(resolve => {
-            setTimeout(() => {
-                resolve(data[page] || []);
-            }, 1000);
-        });
-    }
-
+    
 
     const {
         data,         //use it in Flatlist data
@@ -78,8 +76,6 @@ const App : React.FC = () => {
 
 
 
-
-
     const ListFooterComponent = () => {
         return(
             <View style={{height : 50}} >
@@ -94,6 +90,8 @@ const App : React.FC = () => {
         )
     };
 
+
+
     return (
         <View style={styles.container}>
             <FlatList
@@ -106,6 +104,7 @@ const App : React.FC = () => {
                 keyExtractor={item => item.toString()}/>
         </View>
     );
+    
 };
 
 
