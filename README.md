@@ -61,7 +61,7 @@ const App : React.FC = () => {
         addData,      //push new group of data
         onEndReached, //callback in Flatlist onEndReached
         loadingMore,  //if true show loading more Indicator
-        pageIndex,    //current pageIndex
+        pageIndex,    //current pageIndex use it to query data
         noMoreData    //if true show noMoreData message
     } = usePagination(10); //pageSize = 10
 
