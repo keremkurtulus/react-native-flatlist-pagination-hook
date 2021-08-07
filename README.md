@@ -16,12 +16,12 @@ import usePagination from "react-native-flatlist-pagination-hook";
 
 const {
     data,         //use it in Flatlist data
-    resetData,    //use it to reset data when Flatlist refreshing
     addData,      //push new group of data
     onEndReached, //callback in Flatlist onEndReached
     loadingMore,  //if true show loading more Indicator
     pageIndex,    //current pageIndex use it to query data
-    noMoreData    //if true show noMoreData message
+    noMoreData,   //if true show noMoreData message
+    resetData,    //use it to reset data when Flatlist refreshing
 } = usePagination(10); //pageSize = 10
 
 ```
@@ -57,12 +57,12 @@ const App : React.FC = () => {
 
     const {
         data,         //use it in Flatlist data
-        resetData,    //use it to reset data when Flatlist refreshing
         addData,      //push new group of data
         onEndReached, //callback in Flatlist onEndReached
         loadingMore,  //if true show loading more Indicator
         pageIndex,    //current pageIndex use it to query data
-        noMoreData    //if true show noMoreData message
+        noMoreData,   //if true show noMoreData message
+        resetData,    //use it to reset data when Flatlist refreshing
     } = usePagination(10); //pageSize = 10
 
 
