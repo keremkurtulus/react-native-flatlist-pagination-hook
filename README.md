@@ -28,12 +28,12 @@ const fetchApi = (page = 0, pageSize = 10) => {
 const App : React.FC<any> = () => {
     
     const {
-        data,
-        addData,
-        onEndReached,
-        pageIndex,
-        ListFooterComponent
-    } = usePagination(10);
+        data,         //use it in Flatlist data
+        addData,      //push new group of data
+        onEndReached, //callback in Flatlist onEndReached
+        pageIndex,    //current pageIndex use it to query data
+        ListFooterComponent, //use it in Flatlist ListFooterComponent
+    } = usePagination(10); //pageSize = 10
     
     
     React.useEffect(() => {
