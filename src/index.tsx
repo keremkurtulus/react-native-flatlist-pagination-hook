@@ -1,4 +1,5 @@
 import React from 'react';
+import FooterComponent, {FooterComponentProps} from "./FooterComponent";
 
 
 
@@ -9,7 +10,8 @@ export type ReturnUsePaginationType = {
   loadingMore: boolean,
   onEndReached: () => void,
   pageIndex: number,
-  noMoreData: boolean,
+  ListFooterComponent: React.FC<FooterComponentProps>,
+  hasMoreData: boolean,
 };
 
 
@@ -58,6 +60,7 @@ const usePagination : usePaginationType = (pageSize = 10) => {
   };
 
 
+  const hasMoreData = !(data.length > 0 && lastPageSize !== pageSize);
 
 
   return {
@@ -67,7 +70,8 @@ const usePagination : usePaginationType = (pageSize = 10) => {
     onEndReached,
     loadingMore,
     pageIndex,
-    noMoreData: data.length > 0 && lastPageSize !== pageSize,
+    ListFooterComponent: () => <FooterComponent loadingMore={loadingMore} hasMoreData={hasMoreData}/>,
+    hasMoreData,
   }
 
 }
