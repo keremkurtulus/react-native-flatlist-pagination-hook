@@ -1,6 +1,6 @@
 {
   "name": "react-native-flatlist-pagination-hook",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "react native flatlist usePagination hook to make infinity scroll more easy",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",

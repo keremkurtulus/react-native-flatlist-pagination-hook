@@ -9,7 +9,7 @@
 npm install react-native-flatlist-pagination-hook
 ```
 
-##example
+## example
 
 ```js
 import React from 'react';
@@ -74,7 +74,7 @@ export default App;
 
 
 
-## Usage
+## usePagination full Usage
 
 ```js
 import usePagination from "react-native-flatlist-pagination-hook";
